@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dialogue Detective</title>
+  <link rel="icon" href="assets/dialogue_detective-preview2.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Background Slideshow -->
+  <div class="background-slideshow">
+    <div class="slide active"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+
+  <header class="header">
+    <div class="logo-group">
+      <img src="assets/dialogue_detective-preview.png" alt="Dialogue Detective Logo" class="logo-img" />
+      <div class="tagline">
+        <i class="fas fa-search tagline-icon"></i>
+        <span>Where Audacious Voices Speak Change</span>
+        <i class="fas fa-microphone tagline-icon"></i>
+      </div>
+    </div>
+
+    <div class="brand-name brand-center">
+      <span class="brand-line">DIALOGUE</span>
+      <span class="brand-line">DETECTIVE</span>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Define Your <span class="highlight">Brand</span> Identity
+        </h1>
+        <p class="subtitle">Think of your brand as a person—how would it talk, dress, and act?</p>
+        <p class="author">By Khumo Lecholo</p>
+      </div>
+      <div class="founder-image-container">
+        <img src="founder.jpg" alt="Khumo Lecholo, Founder of Dialogue Detective" class="founder-image" />
+        <p class="founder-title">Founder & Creative Director</p>
+      </div>
+    </section>
+
+    <section class="case-quest" id="game-section">
+      <h2>🧩 Case Quest: <span>"The Missing Brand Voice"</span></h2>
+
+      <div id="name-form">
+        <p>Before we begin, what's your detective name?</p>
+        <input type="text" id="detective-name" placeholder="Enter your name" />
+        <button class="case-btn" id="start-btn">Start Investigation</button>
+      </div>
+
+      <div id="quiz" style="display: none;">
+        <p id="question-text"></p>
+        <div class="case-buttons" id="choices"></div>
+        <p id="game-feedback" class="game-feedback"></p>
+        <p id="hint-message" class="hint-message"></p>
+        <progress id="progress-bar" value="0" max="100"></progress>
+
+        <div id="final-result" style="display: none;">
+          <p id="score-message"></p>
+          <button class="case-btn" id="restart-btn">🔄 Restart Game</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Slider -->
+    <section class="cards-slider">
+      <button class="slider-nav prev-btn" aria-label="Previous cards">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="slider-container">
+        <div class="grid">
+          <div class="card">
+            <div class="card-image-container">
+              <img src="5-removebg-preview.png" alt="Microphone" class="card-image" />
+            </div>
+            <div class="card-content">
+              <p><strong>Purpose & Growth:</strong> Dialogue Detective speaks with purpose for knowledge sharing, always leaving space for reflection, growth, and humour.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image-container">
+              <img src="7-removebg-preview.png" alt="Professional Woman" class="card-image" />
+            </div>
+            <div class="card-content">
+              <p><strong>Brand Style:</strong> Modern, grounded, expressive. Not corporate-stiff, always intentional.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image-container">
+              <img src="6-removebg-preview.png" alt="Newspapers" class="card-image" />
+            </div>
+            <div class="card-content">
+              <p><strong>Support:</strong> Whether shy or growing, we walk with you step by step. Every brand has a story—we help you tell it clearly.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image-container">
+              <img src="8-removebg-preview.png" alt="Team" class="card-image" />
+            </div>
+            <div class="card-content">
+              <p><strong>Our Team:</strong> Mentors and creatives. We collaborate with intention, value every voice in the room, and listen actively.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image-container">
+              <a href="https://sportify.com" target="_blank" class="card-link">
+                <img src="Sportify.jpg" alt="Sportify" class="card-image" />
+              </a>
+            </div>
+            <div class="card-content">
+              <p><strong>Listen on Sportify:</strong> Check out our podcast episodes available on Sportify for more engaging content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="slider-nav next-btn" aria-label="Next cards">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <!-- Brand Personification Questions -->
+    <section class="brand-questions">
+      <h2>💬 Think of Your Brand as a Person...</h2>
+      <div id="question-box" class="question-box"></div>
+      <div>
+        <button id="next-question-btn">Next Question</button>
+        <button id="restart-questions-btn" style="display:none;">Restart Questions</button>
+      </div>
+    </section>
+
+    <!-- Easter Egg -->
+    <img src="https://cdn-icons-png.flaticon.com/512/3580/3580362.png" alt="Detective Hat" id="easter-egg" loading="lazy" />
+    <div id="secret-popup" class="dyk-popup">
+      <strong>🕵️ Did You Know?</strong>
+      <p id="dyk-text"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Start with clarity. Stand for something. Attract the right audience.</p>
+    <p class="date"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
